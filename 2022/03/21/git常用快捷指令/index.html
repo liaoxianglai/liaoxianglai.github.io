@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mac通过hexo+github搭建个人博客, xianglai的博客">
+    <meta name="keywords" content="git常用快捷指令, xianglai的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mac通过hexo+github搭建个人博客 | xianglai的博客</title>
+    <title>git常用快捷指令 | xianglai的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mac通过hexo+github搭建个人博客</h1>
+                    <h1 class="description center-align post-title">git常用快捷指令</h1>
                 </div>
             </div>
         </div>
@@ -434,10 +434,6 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
                             <a href="/tags/github/">
                                 <span class="chip bg-color">github</span>
                             </a>
@@ -463,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-27
+                    2022-03-21
                 </div>
                 
 
@@ -487,185 +483,107 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><blockquote>
-<p>Hexo 是一个静态博客框架，基于 Node.js，将 Markdown 文章通过渲染引擎，生成一个静态网页，再结合 Git 命令（ssh），Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-</blockquote>
-<h2 id="1-申请github账号并创建仓库"><a href="#1-申请github账号并创建仓库" class="headerlink" title="1. 申请github账号并创建仓库"></a>1. 申请github账号并创建仓库</h2><p>访问<a href="https://github.com/">github</a>，如果没有github账号新建一个，有github账号的话登录github账号。新建一个仓库，并将仓库的名字命名为：username.github.io, username是github账号的名字(owner)。</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guw2r5cuquj615a0kkwhb02.jpg"></p>
-<h2 id="2-mac上配置博客环境"><a href="#2-mac上配置博客环境" class="headerlink" title="2. mac上配置博客环境"></a>2. mac上配置博客环境</h2><h4 id="2-1-安装node-js和hexo"><a href="#2-1-安装node-js和hexo" class="headerlink" title="2.1. 安装node.js和hexo"></a>2.1. 安装<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">node.js</a>和hexo</h4><p>进入链接，选择长期稳定版(LST)，点击下载对应操作系统的版本, 安装包一路next下去就行。</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guw2dvo9s7j61cr0u0q7902.jpg"></p>
-<p>安装完成以后输入一下指令进行检查：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">node -v
-npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>通过输入以下指令安装hexo，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sudo npm install -g hexo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h4 id="2-2-安装git"><a href="#2-2-安装git" class="headerlink" title="2.2. 安装git"></a>2.2. 安装git</h4><p>没有安装homebrew的，先安装homebrew，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>安装git</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew install git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>验证是否有效安装，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Git --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>若是安装无误，配置Git，设置username和email，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git config --global user.name "linghuchong"
-git config --global user.email "52013149836@qq.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>通过终端命令行生成ssh密钥，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C "52013149836@qq.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>密钥生成后确认是否成功，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd ~/.ssh
-ls<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>如果密钥生成的话会看到列表里面包含id_rsa(私钥), id_rsa.pub(公钥)</p>
-<p>打开id_rsa.pub，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cat ~/.ssh/id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>复制公钥，</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guw2f61nkrj60vo06ymzu02.jpg"></p>
-<p>在github中添加公钥，</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guw2gfbll9j61jy0skag702.jpg"></p>
-<h2 id="3-博客基本设置"><a href="#3-博客基本设置" class="headerlink" title="3. 博客基本设置"></a>3. 博客基本设置</h2><p>为了查找方便，在桌面上新建了一个文件夹myblog，打开终端，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">cd desktop
-cd myblog<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>hexo框架的安装，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>初始化文件夹</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>安装博客所需要的依赖文件，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">npm install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>等待运行完成时，该文件夹中就多了许多文件，hexo的基本框架搭建完毕。</p>
-<h2 id="4-搭建第一个博客"><a href="#4-搭建第一个博客" class="headerlink" title="4. 搭建第一个博客"></a>4. 搭建第一个博客</h2><h4 id="4-1-本地运行hexo博客"><a href="#4-1-本地运行hexo博客" class="headerlink" title="4.1 本地运行hexo博客"></a>4.1 本地运行hexo博客</h4><p>打开终端，运行以下指令，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean &amp;&amp; hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>复制窗口中出现的链接，可以看到一个网页，说明hexo博客已在本地成功运行。</p>
-<h4 id="4-2-将hexo博客部署到github上去"><a href="#4-2-将hexo博客部署到github上去" class="headerlink" title="4.2 将hexo博客部署到github上去"></a>4.2 将hexo博客部署到github上去</h4><p>首先需要安装发布的插件，打开终端，cd跳转到创建的博客目录下，在这里也就是myblog下，执行，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sudo npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>在博客目录中有一个_config.yml文件，是博客的配置文件。通过文本编辑器(vscode, sublime)打开_config.yml文件，下拉到文件最底部，有一个deploy，添加以下语句，username是自己github的用户名。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
-  type: git
-  repository: git@github.com:username/username.github.io.git
-  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>终端下执行如下命令，生成页面，并发布到github pages上，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean &amp;&amp; hexo g
-hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>上传完成后，在浏览器中打开<strong>https://<code>username</code>.github.io</strong>查看上传的网页，如果页面变成了本地调试的样子，代表部署成功。</p>
-<h4 id="4-3-基本设置"><a href="#4-3-基本设置" class="headerlink" title="4.3 基本设置"></a>4.3 基本设置</h4><p>在<strong>myblog</strong>文件夹下有一个文件_config.yml, 同时在<strong>myblog/themes/hexo-theme-matery</strong>文件夹下也有一个config.yml文件，前者称为<strong>站点配置文件</strong>，后者称为<strong>主题配置文件</strong>。</p>
-<h5 id="4-3-1-更改主题"><a href="#4-3-1-更改主题" class="headerlink" title="4.3.1 更改主题"></a>4.3.1 更改主题</h5><p>hexo博客自带的主题不太好看，因此需要我们自己更改为一个喜欢的主题。这里我选择了<a href="https://github.com/blinkfox/hexo-theme-matery">matery</a>，可以通过链接下载，然后将<strong>hexo-theme-matery</strong>文件夹复制到<strong>myblog/themes</strong>文件夹中。也可以在<strong>myblog</strong>目录下使用git进行下载，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone https://github.com/blinkfox/hexo-theme-matery themes/matery # 稳定版<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git clone -b develop https://github.com/blinkfox/hexo-theme-matery themes/matery # 最新版<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>主题下载完毕后，打开<strong>myblog</strong>中的站点配置文件_config.yml，修改theme值为hexo-theme-matery-master，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: hexo-theme-matery-master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>站点配置文件_config.yml中的其余设置根据需要进行更改，例如：</p>
-<ul>
-<li>语言选择：如果为想要使用中文，则在<strong>language:<strong>后添加值</strong>zh-CN</strong>，如果不修改，默认为英语；</li>
-<li>站点配置文件有个<strong>per_page</strong>属性，建议修改为6的倍数，比如12，18，这样网站在适应设备时，有较好的显示效果；</li>
-<li>网址修改：<strong>url：</strong>的值修改为自己的网址名，如<strong><a target="_blank" rel="noopener" href="https://username.github.io/">https://username.github.io</a></strong>,如果有域名，修改为自己的域名即可。</li>
-</ul>
-<h5 id="4-3-1-新建标签tags页面"><a href="#4-3-1-新建标签tags页面" class="headerlink" title="4.3.1 新建标签tags页面"></a>4.3.1 新建标签tags页面</h5><p>tags页面是用来显示所有标签的页面，如果在你的博客的<strong>source</strong>目录下还没有<strong>tags/index.md</strong>文件，就需要新建一个，命令如下，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page "tags"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>编辑你刚刚新建的页面文件 /source/tags/index.md，至少需要以下内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: tags
-date: 2021-09-28 18:23:38
-type: "tags"
-layout: "tags"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="4-3-2-新建分类categories页面"><a href="#4-3-2-新建分类categories页面" class="headerlink" title="4.3.2 新建分类categories页面"></a>4.3.2 新建分类categories页面</h5><p><code>categories</code> 页是用来展示所有分类的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page "categories"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，至少需要以下内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: categories
-date: 2021-09-28 17:25:30
-type: "categories"
-layout: "categories"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="4-3-3-新建关于我about页面"><a href="#4-3-3-新建关于我about页面" class="headerlink" title="4.3.3 新建关于我about页面"></a>4.3.3 新建关于我about页面</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page "about"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，至少需要以下内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: about
-date: 2021-09-28 17:25:30
-type: "about"
-layout: "about"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="4-3-4-新建留言板contact页面"><a href="#4-3-4-新建留言板contact页面" class="headerlink" title="4.3.4 新建留言板contact页面"></a>4.3.4 新建留言板contact页面</h5><p><code>contact</code> 页是用来展示<strong>留言板</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>contact/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page "contact"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>编辑你刚刚新建的页面文件 <code>/source/contact/index.md</code>，至少需要以下内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: contact
-date: 2021-09-28 17:25:30
-type: "contact"
-layout: "contact"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="4-3-5-新建友情链接friends页面"><a href="#4-3-5-新建友情链接friends页面" class="headerlink" title="4.3.5 新建友情链接friends页面"></a>4.3.5 新建友情链接friends页面</h5><p><code>friends</code> 页是用来展示<strong>友情链接</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>friends/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>编辑你刚刚新建的页面文件 <code>/source/friends/index.md</code>，至少需要以下内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">title: friends
-date: 2021-09-28 21:25:30
-type: "friends"
-layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>同时，在你的博客 <code>source</code> 目录下新建 <code>_data</code> 目录，在 <code>_data</code> 目录中新建 <code>friends.json</code> 文件，文件内容如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">[{
-    "avatar": "http://image.luokangyuan.com/1_qq_27922023.jpg",
-    "name": "码酱",
-    "introduction": "我不是大佬，只是在追寻大佬的脚步",
-    "url": "http://luokangyuan.com/",
-    "title": "前去学习"
-}, {
-    "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "闪烁之狐",
-    "introduction": "编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬",
-    "url": "https://blinkfox.github.io/",
-    "title": "前去学习"
-}, {
-    "avatar": "http://image.luokangyuan.com/avatar.jpg",
-    "name": "ja_rome",
-    "introduction": "平凡的脚步也可以走出伟大的行程",
-    "url": "https://me.csdn.net/jlh912008548",
-    "title": "前去学习"
-}]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="4-3-6-修改社交链接"><a href="#4-3-6-修改社交链接" class="headerlink" title="4.3.6 修改社交链接"></a>4.3.6 修改社交链接</h5><p>在主题的 <code>_config.yml</code> 文件中，默认支持 <code>QQ</code>、<code>GitHub</code> 和邮箱等的配置，</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guwipzn7ubj61700ccq5902.jpg"></p>
-<h5 id="4-3-7-修改打赏的二维码图片"><a href="#4-3-7-修改打赏的二维码图片" class="headerlink" title="4.3.7 修改打赏的二维码图片"></a>4.3.7 修改打赏的二维码图片</h5><p>在主题文件的 <code>source/medias/reward</code> 文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
-<h4 id="4-4-写博客"><a href="#4-4-写博客" class="headerlink" title="4.4 写博客"></a>4.4 写博客</h4><p>打开终端，cd进myblog文件夹，新建博客，</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new “博客名称”<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>此时，会在source/_posts下产生一个博客名称.md文件和一个以博客名称命名的文件夹，可以将文件夹删除。</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guwjetdzfdj60ry0ak3yu02.jpg"></p>
-<p>在文档最前面设置分类和标签，</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1guwji5hnn9j60ka092glv02.jpg"></p>
-<p>Markdown工具推荐使用Typora，markdown中的图片可以使用图床生成链接，再粘贴到编辑器中，图床可以使用微博图床和阿里云的oss。mac用户可以在应用商店中下载iPic，可以方便的将图片上传到图床（默认是微博图床）。</p>
-<h2 id="5-高阶使用方式"><a href="#5-高阶使用方式" class="headerlink" title="5. 高阶使用方式"></a>5. 高阶使用方式</h2><p>更多的使用和设置方式，比如修改主题颜色、添加评论系统、域名解析与绑定可以参考博客：</p>
-<p><a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/4ab2.html%EF%BC%8C">https://yafine-blog.cn/posts/4ab2.html，</a></p>
-<p>以及<a href="https://github.com/blinkfox/hexo-theme-matery">github</a>上的issue。</p>
-<h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/63edbb08bd5f">https://www.jianshu.com/p/63edbb08bd5f</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7edb6b838a2e">https://www.jianshu.com/p/7edb6b838a2e</a></li>
-<li><a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/4ab2.html">https://yafine-blog.cn/posts/4ab2.html</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/75438236">https://zhuanlan.zhihu.com/p/75438236</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wanzew/article/details/108818777">https://blog.csdn.net/wanzew/article/details/108818777</a></li>
+                <h1 id="一-新建代码库"><a href="#一-新建代码库" class="headerlink" title="一 新建代码库"></a>一 新建代码库</h1><ol>
+<li>在当前目录下新建一个git代码库</li>
 </ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">git init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>新建一个目录，将其初始化为git代码库</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git init [project name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>下载一个项目和它的整个代码历史</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">git clone [仓库链接]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h1 id="二-增加删除文件"><a href="#二-增加删除文件" class="headerlink" title="二 增加删除文件"></a>二 增加删除文件</h1><ol>
+<li><p>添加指定文件到暂存区</p>
+<pre class="line-numbers language-none"><code class="language-none">git add [file1] [file2]...<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>添加指定目录到暂存区，包括子目录</p>
+<pre class="line-numbers language-none"><code class="language-none">git add [dir]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>添加当前目录的所有文件到暂存区</p>
+<pre class="line-numbers language-none"><code class="language-none">git add .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>删除工作区文件，并将这次删除放入暂存区</p>
+<pre class="line-numbers language-none"><code class="language-none">git rm [file1] [file2] ...<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h1 id="三-代码提交"><a href="#三-代码提交" class="headerlink" title="三 代码提交"></a>三 代码提交</h1><ol>
+<li><p>提交暂存区中的文件到仓库区</p>
+<pre class="line-numbers language-none"><code class="language-none">git commit -m [message]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>提交暂存区中的指定文件到仓库区</p>
+<pre class="line-numbers language-none"><code class="language-none">git commit [file1] [file2] ... -m [message]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>将add和commit合为一步</p>
+<pre class="line-numbers language-none"><code class="language-none">git commit -am [message]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h1 id="四-远程同步"><a href="#四-远程同步" class="headerlink" title="四 远程同步"></a>四 远程同步</h1><ol>
+<li><p>下载远程仓库的所有变动</p>
+<pre class="line-numbers language-none"><code class="language-none">git fetch [remote]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>显示所有远程仓库</p>
+<pre class="line-numbers language-none"><code class="language-none">git remote -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>显示某个远程仓库的信息</p>
+<pre class="line-numbers language-none"><code class="language-none">git remote show [remote]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>增加一个新的远程仓库，并命名</p>
+<pre class="line-numbers language-none"><code class="language-none">git remote add [shortname] [url]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>取回远程仓库的变化，并与本地分支合并</p>
+<pre class="line-numbers language-none"><code class="language-none">git pull [remote] [branch]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>上传本地指定分支到远程仓库</p>
+<pre class="line-numbers language-none"><code class="language-none">git push [remote] [branch]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>强行推送当前分支到远程仓库，即使有冲突</p>
+<pre class="line-numbers language-none"><code class="language-none">git push [remote] --force<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>推送所有分支到远程仓库</p>
+<pre class="line-numbers language-none"><code class="language-none">git push [remote] --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h1 id="五-分支"><a href="#五-分支" class="headerlink" title="五 分支"></a>五 分支</h1><ol>
+<li><p>列出本地所有分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git branch<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>列出所有远程分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git branch -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>列出所有本地分支和远程分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git branch -a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>新建一个分支，但依然停留在当前分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git branch [branch-name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>新建一个分支，并切换到该分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git checkout -b [branch]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>合并指定分支到当前分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git merge [branch]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>删除分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git branch -d [branch-name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>删除远程分支</p>
+<pre class="line-numbers language-none"><code class="language-none">git push origin --delete [branch-name]
+git branch -dr [remote/branch]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ol>
+<h1 id="六-查看信息"><a href="#六-查看信息" class="headerlink" title="六 查看信息"></a>六 查看信息</h1><ol>
+<li><p>显示有变更的文件</p>
+<pre class="line-numbers language-none"><code class="language-none">git status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>显示当前分支的版本历史</p>
+<pre class="line-numbers language-none"><code class="language-none">git log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>显示暂存区和工作区的差异</p>
+<pre class="line-numbers language-none"><code class="language-none">git diff<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<h1 id="七-撤销"><a href="#七-撤销" class="headerlink" title="七 撤销"></a>七 撤销</h1><ol>
+<li><p>恢复暂存区的指定文件到工作区</p>
+<pre class="line-numbers language-none"><code class="language-none">git&nbsp;checkout&nbsp;[file]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>恢复某个commit的指定文件到暂存区和工作区</p>
+<pre class="line-numbers language-none"><code class="language-none">git checkout [commit] [file]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>恢复暂存区的所有文件到工作区</p>
+<pre class="line-numbers language-none"><code class="language-none">git checkout .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
+<pre class="line-numbers language-none"><code class="language-none">git reset [file]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>重置暂存区和工作区，与上一次的commit保持一致</p>
+<pre class="line-numbers language-none"><code class="language-none">git reset --hard<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>暂时将未提交的变化移除，稍后再移入</p>
+<pre class="line-numbers language-none"><code class="language-none">git stash
+git stash pop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ol>
+<h1 id="八-组合使用"><a href="#八-组合使用" class="headerlink" title="八 组合使用"></a>八 组合使用</h1><pre class="line-numbers language-none"><code class="language-none">git clone url
+git pull
+git checkout -b branch
+git add
+git commit
+git push origion branch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="九-参考链接"><a href="#九-参考链接" class="headerlink" title="九 参考链接"></a>九 参考链接</h1><p><a href="">参考链接：</a><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000039147662">https://segmentfault.com/a/1190000039147662</a></p>
 
                 
             </div>
@@ -692,7 +610,7 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://github.com/2021/09/27/mac%E9%80%9A%E8%BF%87hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">http://github.com/2021/09/27/mac%E9%80%9A%E8%BF%87hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://github.com/2022/03/21/git%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/">http://github.com/2022/03/21/git%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -729,10 +647,6 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
                             
                                 <a href="/tags/github/">
                                     <span class="chip bg-color">github</span>
@@ -905,9 +819,10 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/21/git%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
@@ -925,9 +840,9 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -940,6 +855,7 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -958,13 +874,13 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/26/hexo/">
+                <a href="/2021/09/27/mac%E9%80%9A%E8%BF%87hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="hexo使用">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="mac通过hexo+github搭建个人博客">
                         
-                        <span class="card-title">hexo使用</span>
+                        <span class="card-title">mac通过hexo+github搭建个人博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -975,7 +891,7 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-27
                             </span>
                         <span class="publish-author">
                             
@@ -992,12 +908,12 @@ layout: "friends"<span aria-hidden="true" class="line-numbers-rows"><span></span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Typora/">
-                        <span class="chip bg-color">Typora</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>
