@@ -486,7 +486,8 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/liaoxianglai/RL-reproduction
-git push -u origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+git rm --cached .DS_Store # 该语句通常用来删除.DS_Store，使其不上传到远程仓库
+git push -u origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>通常也可以不用终端执行此操作，用vscode很方便</p>
 
